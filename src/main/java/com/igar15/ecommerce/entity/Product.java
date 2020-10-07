@@ -14,7 +14,7 @@ import java.util.Date;
 public class Product {
 
     @Id
-    @SequenceGenerator(name = "global_seq", sequenceName = "global_seq", allocationSize = 1, initialValue = 1000)
+    @SequenceGenerator(name = "global_seq", sequenceName = "global_seq", allocationSize = 1, initialValue = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "global_seq")
     @Column(name = "id")
     private Long id;

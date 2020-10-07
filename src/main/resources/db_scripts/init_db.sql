@@ -2,7 +2,7 @@ drop table if exists product;
 drop table if exists product_category;
 drop sequence if exists global_seq;
 
-create sequence global_seq start with 1000;
+create sequence global_seq start with 1;
 
 create table product_category(
     id integer primary key default nextval('global_seq'),

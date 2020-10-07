@@ -15,7 +15,7 @@ import java.util.Set;
 public class ProductCategory {
 
     @Id
-    @SequenceGenerator(name = "global_seq", sequenceName = "global_seq", allocationSize = 1, initialValue = 1000)
+    @SequenceGenerator(name = "global_seq", sequenceName = "global_seq", allocationSize = 1, initialValue = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "global_seq")
     @Column(name = "id")
     private Long id;
