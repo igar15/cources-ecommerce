@@ -10,5 +10,8 @@ import java.util.List;
 
 @CrossOrigin("http://localhost:4200")
 public interface ProductRepository extends JpaRepository<Product, Long> {
+
     Page<Product> findByCategoryId(Long id, Pageable pageable);
+
+    Page<Product> findByNameContaining(String name, Pageable pageable);
 }
