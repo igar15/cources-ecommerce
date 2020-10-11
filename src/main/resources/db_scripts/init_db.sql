@@ -1,5 +1,7 @@
 drop table if exists product;
 drop table if exists product_category;
+drop table if exists state;
+drop table if exists country;
 drop sequence if exists global_seq;
 
 create sequence global_seq start with 1;
@@ -22,4 +24,17 @@ create table product (
     last_updated timestamp default null,
     category_id integer not null,
     foreign key (category_id) references product_category (id)
+);
+
+create table country (
+  id integer primary key default nextval('global_seq'),
+  code varchar default null,
+  name varchar default null
+);
+
+create table state (
+  id integer primary key default nextval('global_seq'),
+  name varchar default null,
+  country_id integer not null,
+  foreign key (country_id) references country (id)
 );
